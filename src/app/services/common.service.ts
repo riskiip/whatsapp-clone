@@ -28,7 +28,7 @@ export class CommonService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.user = user;
-        localStorage.set('user', JSON.stringify(this.user));
+        localStorage.setItem('user', JSON.stringify(this.user));
         this.router.navigateByUrl('').then();
       } 
       else {
