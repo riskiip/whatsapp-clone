@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-chat-area',
@@ -10,6 +11,10 @@ export class ChatAreaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onFormSubmitted(form: NgForm) {
+    console.log('bisa');
   }
 
 }

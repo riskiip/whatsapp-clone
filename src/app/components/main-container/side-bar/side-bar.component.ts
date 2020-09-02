@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-side-bar',
@@ -12,7 +13,7 @@ export class SideBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onFormSubmit(form: any) {
+  onFormSubmit(form: NgForm) {
     console.log(form.value.search);
   }
 
