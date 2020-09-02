@@ -5,11 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainContainerComponent } from './components/main-container/main-container.component';
-import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { SideBarContentComponent } from './components/side-bar-content/side-bar-content.component';
-import { ChatAreaComponent } from './components/chat-area/chat-area.component';
-import { ChatDefaultPageComponent } from './components/chat-default-page/chat-default-page.component';
-import { ChatRoomComponent } from './components/chat-room/chat-room.component';
+import { SideBarComponent } from './components/main-container/side-bar/side-bar.component';
+import { SideBarContentComponent } from './components/main-container/side-bar/side-bar-content/side-bar-content.component';
+import { ChatAreaComponent } from './components/main-container/chat-area/chat-area.component';
+import { ChatDefaultPageComponent } from './components/main-container/chat-area/chat-default-page/chat-default-page.component';
+import { ChatRoomComponent } from './components/main-container/chat-area/chat-room/chat-room.component';
 
 @NgModule({
   declarations: [
