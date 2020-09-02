@@ -42,11 +42,30 @@
 
             &__icon {
                 position: absolute;
-                top: 20%;
-                left: 10px;
+                top: -5px;
+                left: 0px;
                 color: #ccc;
                 font-size: 14px;
             }
+
+            &__input {
+                border: ipx solid lightgray;
+                width: 380px;
+                outline: none;
+                border-radius: 20px;
+                padding: 8px 20px 8px 30px;
+                
+                &::placeholder {
+                    padding-left: 2.5rem;
+                    font-size: small;
+                }
+            }
+
         }
+    }
+
+    .sidebar__content {
+        overflow-y: scroll;
+        flex: 1;
     }
 }
