@@ -12,4 +12,8 @@ export class SideBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  onFormSubmit(form: any) {
+    console.log(form.value.search);
+  }
+
 }
