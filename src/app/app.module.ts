@@ -11,6 +11,7 @@ import { ChatAreaComponent } from './components/main-container/chat-area/chat-ar
 import { ChatDefaultPageComponent } from './components/main-container/chat-area/chat-default-page/chat-default-page.component';
 import { ChatRoomComponent } from './components/main-container/chat-area/chat-room/chat-room.component';
 import { MaterialModule } from './shared/material.module';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MaterialModule } from './shared/material.module';
     SideBarContentComponent,
     ChatAreaComponent,
     ChatDefaultPageComponent,
-    ChatRoomComponent
+    ChatRoomComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
