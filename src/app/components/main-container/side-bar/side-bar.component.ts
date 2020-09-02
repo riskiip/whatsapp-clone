@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { RoomData } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,6 +8,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
+  randomSeed: any[] = [];
+  roomData: RoomData[] = [];
 
   constructor() { }
 

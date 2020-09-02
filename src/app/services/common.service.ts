@@ -65,3 +65,8 @@ export class CommonService {
     return this.user;
   }
 }
+
+export interface RoomData {
+  name: string;
+  id?: string;
+}
