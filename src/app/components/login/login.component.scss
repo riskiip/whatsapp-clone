@@ -1,0 +1,16 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+    & > img {
+        height: 40%;
+        margin-bottom: 40px;
+    }
+
+    button img {
+        width: 300px;
+    }
+}
