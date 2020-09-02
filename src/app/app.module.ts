@@ -13,6 +13,10 @@ import { ChatDefaultPageComponent } from './components/main-container/chat-area/
 import { ChatRoomComponent } from './components/main-container/chat-area/chat-room/chat-room.component';
 import { MaterialModule } from './shared/material.module';
 import { LoginComponent } from './components/login/login.component';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
