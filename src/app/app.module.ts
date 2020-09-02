@@ -10,6 +10,7 @@ import { SideBarContentComponent } from './components/main-container/side-bar/si
 import { ChatAreaComponent } from './components/main-container/chat-area/chat-area.component';
 import { ChatDefaultPageComponent } from './components/main-container/chat-area/chat-default-page/chat-default-page.component';
 import { ChatRoomComponent } from './components/main-container/chat-area/chat-room/chat-room.component';
+import { MaterialModule } from './shared/material.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ChatRoomComponent } from './components/main-container/chat-area/chat-ro
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
