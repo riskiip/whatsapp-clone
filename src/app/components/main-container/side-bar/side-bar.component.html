@@ -1,6 +1,6 @@
 <section class="sidebar">
     <div class="sidebar__header">
-        <img src="https://www.monsterbacklinks.com/pics/319222-1IvI0s1421931178.png" 
+        <img src="https://www.monsterbacklinks.com/pics/319222-1IvI0s1421931178.png"
             alt="My Avatar"
             mat-card-avatar>
         <div class="sidebar__header__icons">
@@ -32,8 +32,8 @@
     </div>
 
     <div class="sidebar__content">
-        <ng-container>
-            <app-side-bar-content></app-side-bar-content>
+        <ng-container *ngFor="let r of roomData; let i=index">
+            <app-side-bar-content [roomData]=r [randomSeed]="randomSeed[i]" (seedValue)="seedData($event)"></app-side-bar-content>
         </ng-container>
     </div>
 </section>

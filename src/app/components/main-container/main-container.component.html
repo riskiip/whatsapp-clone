@@ -1,9 +1,7 @@
 <section class="main-content">
-    <app-side-bar>
-
+    <app-side-bar (seedValue)="seedData($event)">
     </app-side-bar>
 
-    <app-chat-area>
-        
+    <app-chat-area [randomSeed]="seedValue">
     </app-chat-area>
 </section>

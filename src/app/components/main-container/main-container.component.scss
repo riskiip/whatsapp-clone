@@ -1,15 +1,16 @@
-.main-content {
-    display: flex;
-    height: 100%;
-    background-color: white;
-    font-size: 16px;
+section.main-content{
+  display: flex;
+  height:100%;
+  background-color: white;
+  font-size: 16px;
 
-    app-side-bar {
-        height: auto;
-    }
 
-    app-chat-area {
-        height: 100%;
-        width: 100%;
-    }
+  app-sidebar{
+    height:auto;
+  }
+
+  app-chat-area {
+    height:100%;
+    width:100%;
+  }
 }
