@@ -14,6 +14,7 @@ export class ChatAreaComponent implements OnInit {
   @Input() randomSeed: string;
   subs: Subscription;
   paramValue: string;
+  roomName: string;
 
   constructor(
     private commonService: CommonService,
@@ -45,5 +46,11 @@ export class ChatAreaComponent implements OnInit {
         name: this.commonService.getUser().displayName,
         time: firebase.firestore.FieldValue.serverTimestamp(),
       });
+  }
+
+  chatData(ev: any) {
+    if (ev.chatData !== undefined) {
+      ev.chatData.subscribe(roomName => this.roomName = roomName);
+    }
   }
 }

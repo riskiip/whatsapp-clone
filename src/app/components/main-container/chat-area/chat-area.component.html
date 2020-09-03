@@ -3,7 +3,7 @@
     <img alt="avatar" mat-card-avatar
          src="https://avatars.dicebear.com/api/avataaars/abcd{{ randomSeed }}.svg">
     <div class="chat__header__room-name">
-      <h4>{{ 'ROOM NAME' }}</h4>
+      <h4>{{ roomName || 'ROOM NAME' }}</h4>
     </div>
     <div class="chat__header__right">
       <button mat-icon-button>
@@ -19,7 +19,7 @@
   </div>
 
   <div class="chat__body">
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="chatData($event)"></router-outlet>
   </div>
 
   <div class="chat__footer">

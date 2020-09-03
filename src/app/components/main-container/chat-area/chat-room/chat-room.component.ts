@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { CommonService } from 'src/app/services/common.service';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
@@ -16,6 +16,7 @@ export class ChatRoomComponent implements OnInit, OnDestroy {
   isUser: User;
   item;
   messageData: any[] = [];
+  @Output() chatData: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(
     private commonService: CommonService,
@@ -43,6 +44,7 @@ export class ChatRoomComponent implements OnInit, OnDestroy {
           .get()
           .subscribe((data) => {
             this.item = data;
+            this.chatData.emit(this.item.data().name);
           });
 
         // To get message sorting by time ascendent (order sesuai last message masuk)
