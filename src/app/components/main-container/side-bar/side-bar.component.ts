@@ -1,14 +1,20 @@
-import { Component, OnInit, OnDestroy, Output, EventEmitter } from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { RoomData, CommonService } from "src/app/services/common.service";
-import { AngularFirestore } from "@angular/fire/firestore";
-import { map, tap } from "rxjs/operators";
-import { Subscription } from "rxjs";
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Output,
+  EventEmitter,
+} from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { RoomData, CommonService } from 'src/app/services/common.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { map, tap } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: "app-side-bar",
-  templateUrl: "./side-bar.component.html",
-  styleUrls: ["./side-bar.component.scss"],
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent implements OnInit, OnDestroy {
   randomSeed: any[] = [];
@@ -31,7 +37,7 @@ export class SideBarComponent implements OnInit, OnDestroy {
     // Fetching Data from firestore
     this.subs.push(
       this.afs
-        .collection("rooms")
+        .collection('rooms')
         .snapshotChanges()
         .pipe(
           map((actions) => {
@@ -53,6 +59,35 @@ export class SideBarComponent implements OnInit, OnDestroy {
 
   onFormSubmit(form: NgForm) {
     console.log(form.value.search);
+    // this.subs.push(
+    //   this.afs
+    //     .collection<RoomData>('rooms')
+    //     .valueChanges()
+    //     .pipe(
+    //       map((data: RoomData[]) =>
+    //         data.map(
+    //           (s) => s.name?.toLowerCase() === form.value.search?.toLowerCase()
+    //         )
+    //       )
+    //     )
+    //     .subscribe((dataValue) => {
+    //       dataValue = dataValue.filter((s) => s === true);
+
+    //       if (dataValue.length > 0) {
+    //         alert('Sorry, room already present');
+    //         return;
+    //       } else {
+    //         if (form.value.search !== null) {
+    //           this.afs.collection('rooms').add({
+    //             name: form.value.search,
+    //           });
+    //         } else {
+    //           return;
+    //         }
+    //         form.resetForm();
+    //       }
+    //     })
+    // );
   }
 
   ngOnDestroy() {
