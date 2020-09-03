@@ -62,4 +62,8 @@ export class SideBarComponent implements OnInit, OnDestroy {
   seedData(ev: string) {
     this.seedValue.emit(ev);
   }
+
+  onLogout() {
+    this.commonService.logOut();
+  }
 }
